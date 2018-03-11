@@ -1,11 +1,9 @@
 # MB-io
 
-To run tests execute: mvn clean install
+To run the program execute: mvn clean install
 
-To launch a server execute in the module's top directory: mvn clean spring-boot:run
+I use the fenix framework as my only framework.
 
-To launch all servers execute in bin directory: startservers
+The work is not complete, didn't include tests in wich i was trying to use JUnit but wasn't asked for so i didn't do it.
 
-To stop all servers execute: bin/shutdownservers
-
-To run jmeter (nogui) execute in project's top directory: mvn -Pjmeter verify. Results are in target/jmeter/results/, open the .jtl file in jmeter, by associating the appropriate listeners to WorkBench and opening the results file in listener context
+The API is not complete, there is a just a sample of a presentation in html.
