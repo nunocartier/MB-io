@@ -1,0 +1,66 @@
+package MB-io;
+
+class Dealer {
+	String id;
+	String name;
+	float latitude;
+	float longitude;
+}
+
+relation RootHasDealers {
+	Root playsRole root {
+		multiplicity 1..1;
+	}
+	Dealer playsRole dealer {
+		multiplicity 0..*;
+	}
+}
+
+class Vehicle {
+	String _id;
+	String _model;
+	String _fuel;
+	String _transmission;
+}
+
+relation DealerHasVehicles {
+	Dealer playsRole dealers {
+		multiplicity 1..1;
+	}
+	Vehicle playsRole vehicles {
+		multiplicity 0..*;
+	}
+}
+
+class Availability{
+	String key;
+}
+
+relation VehicleHasAvailability {
+	Vehicle playsRole vehicles {
+		multiplicity 1..1;
+	}
+	Availability playsRole available {
+		multiplicity 0..*;
+	}
+}
+
+class Booking {
+	String id;
+	String vehicleId;
+	String firstName;
+	String lastName;
+	Datetime pickupDate;
+	Datetime createdAt;
+	Datetime cancelledAt;
+	Text cancelledReason;
+}
+
+relation RootHasBookings {
+	Root playsRole root {
+		multiplicity 1..1;
+	}
+	Booking playsRole bookings {
+		multiplicity 0..*;
+	}
+}
